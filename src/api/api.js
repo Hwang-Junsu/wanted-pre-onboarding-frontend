@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://pre-onboarding-selection-task.shop/";
+const BASE_URL = process.env.REACT_APP_SERVER_URL;
 
 const api = axios.create({
   baseURL: BASE_URL,
