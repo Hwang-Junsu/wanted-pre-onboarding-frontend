@@ -6,8 +6,7 @@ import {
   isValidPassword,
   isValidEmailForm,
 } from "../libs/valid";
-import Layout from "../components/Layout";
-import Input from "../components/Input";
+import { Layout, Input } from "../components";
 import styled from "styled-components";
 
 export default function Auth() {
