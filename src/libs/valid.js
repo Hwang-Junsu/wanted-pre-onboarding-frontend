@@ -6,7 +6,9 @@ export const isValidEmailForm = (email) => {
 };
 
 export const isValidPassword = (password) => {
-  const passwordRegax = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
+  const passwordRegax = new RegExp(
+    /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,}$/
+  );
   return passwordRegax.test(password);
 };
 
