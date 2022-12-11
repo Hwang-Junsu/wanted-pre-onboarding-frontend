@@ -127,7 +127,8 @@ const Title = styled.div`
 const AuthForm = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 230px;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
 `;

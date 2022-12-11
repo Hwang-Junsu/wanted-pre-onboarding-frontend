@@ -23,4 +23,8 @@ const StyledInput = styled.input`
   padding: 15px 30px;
   border: 1px solid gray;
   border-radius: 20px;
+  outline: none;
+  &:focus {
+    border: 2px solid purple;
+  }
 `;
