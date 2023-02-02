@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useRef} from "react";
 import styled from "styled-components";
 import useTodo from "../hooks/useTodo";
-import { Layout, Input, IconButton, TodoList } from "../components";
+import {Layout, IconButton, TodoList} from "../components";
 
 function Main() {
-  const { todoList, addTodo, updateTodo, deleteTodo } = useTodo();
-
-  const [todo, setTodo] = useState("");
+  const {todoList, addTodo, updateTodo, deleteTodo} = useTodo();
+  // eslint-disable-next-line no-undef
+  const inputRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const todo = e.target[0].value;
     addTodo(todo);
-    setTodo("");
+    inputRef.current.value = "";
   };
 
   useEffect(() => {
@@ -28,11 +29,13 @@ function Main() {
           <StyleStatus>오늘의 할 일을 입력해주세요!</StyleStatus>
           <StyledInput>
             <Input
-              value={todo}
-              onChange={(e) => setTodo(e.target.value)}
+              ref={inputRef}
               placeholder="Write To Do!"
+              dataTestid="new-todo-input"
             />
-            <IconButton type="submit">➕</IconButton>
+            <IconButton type="submit" data-testid="new-todo-add-button">
+              ➕
+            </IconButton>
           </StyledInput>
         </StyledInputForm>
         <TodoList
@@ -69,6 +72,17 @@ const StyledInput = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 15px 30px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  outline: none;
+  &:focus {
+    border: 2px solid black;
+  }
 `;
 
 const StyleStatus = styled.div`

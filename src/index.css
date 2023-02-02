@@ -1,13 +1,14 @@
 body {
   margin: 0;
-  background-color: plum;
-  font-family: "Do Hyeon", sans-serif;
+  background-color: white;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Jua", sans-serif;
 }
 
 input {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: "Jua", sans-serif;
 }
 
 code {

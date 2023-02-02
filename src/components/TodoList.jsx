@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Todo } from "../components";
+import {Todo} from "../components";
 
-export default function TodoList({ todoList, updateTodo, deleteTodo }) {
+export default function TodoList({todoList, updateTodo, deleteTodo}) {
   return (
     <StyledTodoList>
       <div>
@@ -54,7 +54,7 @@ const StyleStatus = styled.div`
   font-size: 20px;
 `;
 
-const TodoSection = styled.div`
+const TodoSection = styled.ul`
   width: 350px;
   height: 250px;
   border: 2px solid purple;

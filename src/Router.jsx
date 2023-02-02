@@ -1,12 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import React from "react";
-import { Auth, Main } from "./pages";
+import {Main, SignIn, SignUp} from "./pages";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Auth />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/todo" element={<Main />} />
       </Routes>
     </BrowserRouter>
