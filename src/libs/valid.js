@@ -1,7 +1,5 @@
 export const isValidEmailForm = (email) => {
-  const emailRegax = new RegExp(
-    /^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-  );
+  const emailRegax = new RegExp(/^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-.]+$/);
   return email !== "" && email !== "undefined" && emailRegax.test(email);
 };
 
