@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-function Layout({children}) {
+export default function Layout({children}) {
   return <StyledLayout>{children}</StyledLayout>;
 }
-
-export default Layout;
 
 const StyledLayout = styled.div`
   position: relative;

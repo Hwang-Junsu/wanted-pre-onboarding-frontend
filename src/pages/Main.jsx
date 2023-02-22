@@ -3,9 +3,9 @@ import styled from "styled-components";
 import useTodo from "../hooks/useTodo";
 import {Layout, IconButton, TodoList} from "../components";
 
-function Main() {
+export default function Main() {
   const {todoList, addTodo, updateTodo, deleteTodo} = useTodo();
-  // eslint-disable-next-line no-undef
+
   const inputRef = useRef(null);
 
   const handleSubmit = async (e) => {
@@ -47,8 +47,6 @@ function Main() {
     </Layout>
   );
 }
-
-export default Main;
 
 const Container = styled.div`
   display: flex;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import api from "../api/api";
+import api from "../libs/api";
 import {isValidPassword, isValidEmailForm} from "../libs/valid";
 import {Layout, Input} from "../components";
 import styled from "styled-components";
